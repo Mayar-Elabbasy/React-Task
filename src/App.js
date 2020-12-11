@@ -1,5 +1,6 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss'; // import SCSS
+import 'bootstrap/dist/css/bootstrap.min.css'; // import bootstrap
 
 function App() {
   return (
