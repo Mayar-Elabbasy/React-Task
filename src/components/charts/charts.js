@@ -1,8 +1,22 @@
 import React from 'react';
 import { Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import {HorizontalBar} from 'react-chartjs-2';
 // import { Progress } from 'reactstrap';
 
-
+const data = {
+  labels: ['Dentist', 'Cardiologist', 'General Surgery', 'Emergency doctors'],
+  datasets: [
+    {
+      label: 'Staff',
+      backgroundColor: 'darkred',
+      borderColor: 'gray',
+      borderWidth: 1,
+      hoverBackgroundColor: 'gray',
+      hoverBorderColor: 'rgba(255,99,132,1)',
+      data: [10, 14, 6, 4,]
+    }
+  ]
+}
 const Charts = (props) => {
   return (
     <React.Fragment>
@@ -12,8 +26,8 @@ const Charts = (props) => {
         <Card body style={{padding: "35px"}}> 
           <CardTitle tag="h5">Licence Status</CardTitle>
           
-          <div class="progress md-progress">
-            <div class="progress-bar bg-success" role="progressbar" style={{width: "25%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          <div className="progress md-progress">
+            <div className="progress-bar bg-success" role="progressbar" style={{width: "25%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
         
       <CardText style={{float: 'left'}}>Licence No <span style={{color: "lightgray", fontSize:"13px"}}>1234567890</span>
@@ -40,16 +54,16 @@ const Charts = (props) => {
     <Row className="mt-3">
       <Col sm="12">
         <Card body>
-          <ul style={{float: "right"}}>
+          <ul style={{float: "right"}} className="mb-4" >
             <li style={{backgroundColor: "green", color: "white"}}>Overview</li>
             <li> Staff</li>
             <li> Nearing Expiry</li>
           </ul>
         <Row>
         <Col sm="4" className="mb-5">
-          <div class="wrapper">
-            <div class="spinner pie"></div>
-            <div class="filler pie"></div>
+          <div className="wrapper">
+            <div className="spinner pie"></div>
+            <div className="filler pie"></div>
             {/* <div class="mask"></div> */}
           </div>
         </Col>
@@ -57,11 +71,12 @@ const Charts = (props) => {
           <CardTitle tag="h5" style={{fontWeight: "bold"}}>
             Some Items Require Your Attention
           </CardTitle>
+          <HorizontalBar data={data} />
          
         </Col>
         </Row>
 
-        <h4 style={{ fontWeight: "bold"}} className="text-left mb-3">Facility Information</h4>
+        <h4 style={{ fontWeight: "bold"}} className="text-left mb-3 mt-5">Facility Information</h4>
         <Row>
           <Col sm="6">
             <Card className="mb-2 p-1 main-cards">
@@ -111,10 +126,7 @@ const Charts = (props) => {
               </CardTitle>
             </Card>
           </Col>
-        </Row>
-          
-          
-           
+        </Row>  
         </Card>
       </Col>
     </Row>
