@@ -7,7 +7,7 @@ import Charts from './components/charts/charts';
 function App() {
   return (
     <div className="App">
-      <img src={topHeader} alt="header" />
+      <img src={topHeader} alt="header" width="1480"/>
       
       <Charts />
       

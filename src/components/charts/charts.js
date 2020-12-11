@@ -1,11 +1,12 @@
 import React from 'react';
 import { Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
-import { Progress } from 'reactstrap';
+// import { Progress } from 'reactstrap';
+
 
 const Charts = (props) => {
   return (
     <React.Fragment>
-    <div className="container">
+    <div className="container mt-5">
     <Row>
       <Col sm="6">
         <Card body style={{padding: "35px"}}> 
@@ -39,17 +40,81 @@ const Charts = (props) => {
     <Row className="mt-3">
       <Col sm="12">
         <Card body>
-        <Col sm="4">
-      </Col>
-      <Col sm="8">
-        <ul style={{float: "right"}}>
-          <li style={{backgroundColor: "green", color: "white"}}>Overview</li>
-          <li> Staff</li>
-          <li> Nearing Expiry</li>
-        </ul>
-      </Col>
-          <CardTitle tag="h5">Category</CardTitle>
-          <CardText>Medical Laboratory Analysis</CardText>
+          <ul style={{float: "right"}}>
+            <li style={{backgroundColor: "green", color: "white"}}>Overview</li>
+            <li> Staff</li>
+            <li> Nearing Expiry</li>
+          </ul>
+        <Row>
+        <Col sm="4" className="mb-5">
+          <div class="wrapper">
+            <div class="spinner pie"></div>
+            <div class="filler pie"></div>
+            {/* <div class="mask"></div> */}
+          </div>
+        </Col>
+        <Col sm="8">
+          <CardTitle tag="h5" style={{fontWeight: "bold"}}>
+            Some Items Require Your Attention
+          </CardTitle>
+         
+        </Col>
+        </Row>
+
+        <h4 style={{ fontWeight: "bold"}} className="text-left mb-3">Facility Information</h4>
+        <Row>
+          <Col sm="6">
+            <Card className="mb-2 p-1 main-cards">
+              <CardTitle tag="h5" className="text-left ml-5">
+                Main Information
+                <span className="mr-3 mt-2" style={{float: "right", fontSize: "14px"}}>
+                  See Details
+                </span>
+              </CardTitle>
+              
+            </Card>
+            <Card className="mb-2 p-1 main-cards">
+              <CardTitle tag="h5" className="text-left ml-5">Owner Information
+                <span className="mr-3 mt-2" style={{float: "right", fontSize: "14px"}}>
+                  See Details
+                </span>
+              </CardTitle>
+            </Card>
+            <Card className="mb-2 p-1 main-cards">
+              <CardTitle tag="h5" className="text-left ml-5">Medical Director
+                <span className="mr-3 mt-2" style={{float: "right", fontSize: "14px"}}>
+                  See Details
+                </span>
+              </CardTitle>
+            </Card>
+          </Col>
+          <Col sm="6">
+            <Card className="mb-2 p-1 main-cards">
+              <CardTitle tag="h5" className="text-left ml-5">Contact Information
+              <span className="mr-3 mt-2" style={{float: "right", fontSize: "14px"}}>
+                  See Details
+                </span>
+              </CardTitle>
+            </Card>
+            <Card className="mb-2 p-1 main-cards">
+              <CardTitle tag="h5" className="text-left ml-5">Partener Information
+                <span className="mr-3 mt-2" style={{float: "right", fontSize: "14px"}}>
+                  See Details
+                </span>
+              </CardTitle>
+            </Card>
+            <Card className="mb-2 p-1 main-cards">
+              <CardTitle tag="h5" className="text-left ml-5">Location Information
+                <span className="mr-3 mt-2" style={{float: "right", fontSize: "14px"}}>
+                  See Details
+                </span>
+              </CardTitle>
+            </Card>
+          </Col>
+        </Row>
+          
+          
+           
         </Card>
       </Col>
     </Row>
